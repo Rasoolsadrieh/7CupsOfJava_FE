@@ -13,19 +13,19 @@ user requests
 -   [ ] Favorite / Unfavorite a Movie
 -   [ ] View movies by Favorites
 -   [ ] Register / Delete
--   [ ] Sort by Rating
--   [ ] Sory by Genre
 -   [ ] Rent a movie
 -   [ ] Buy a movie
--   [ ] Add Credit Card
--   [ ] Update Credit Card
--   [ ] Delete Credit Card
+-   [ ] Add/Update/Delete Credit Card
+-   [ ] View Customer Order History
+
 
 ## Optional User Stories
 
 - [ ] Add multiple users under one account
 - [ ] Online Rental
 - [ ] Pick up/Delivery
+- [ ] Sort by Rating
+- [ ] Sory by Genre
 
 ## Tables
 link to the table's structure document
@@ -47,8 +47,8 @@ https://docs.google.com/document/d/1GDGMAWtaKeTs5jyoBrA__l0nNFGu01FDo3qKrQ75WiU/
 -   [ ] Azure WebApps (Potentially)
 
 ## Collaborators
-- Jerry Faustin
-- Ross Seyedrasool Sadrieh
-- Maxwell Moord
-- Matthew Swaney
-- Jarrett McClenton
+- Jerry Faustin (JF)
+- Ross Seyedrasool Sadrieh (SRS)
+- Maxwell Moord (MM)
+- Matthew Swaney (MS)
+- Jarrett McClenton (JM)
