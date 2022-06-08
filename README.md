@@ -15,6 +15,7 @@ user requests.
 -   [ ] Register / Delete
 -   [ ] Rent a movie
 -   [ ] Buy a movie
+-   [ ] Return a movie
 -   [ ] Add/Update/Delete Credit Card
 -   [ ] View Customer Order History
 
