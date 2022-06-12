@@ -1,55 +1,70 @@
-# **Project 2:** BlockBusster Movie Application
+# Getting Started with Create React App
 
-## Description
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Our BlockBusster App was developed as an online home movie services that is looking to bring quality old and new movie rentals to users all across the world. Customers 
-can search and favorite some of their most loved films from the comfort of their homes. This RESTful application leverages Spring 5, hibernate, and java 8 that will be persisted through Azure SQL services. This project includes a frontend that will be developed using ReactJs to handle
-user requests.
+## Available Scripts
 
-# User Stories
+In the project directory, you can run:
 
--   [ ] View all movies without Login
--   [ ] Sign in / Sign out
--   [ ] Favorite / Unfavorite a Movie
--   [ ] View movies by Favorites
--   [ ] Register / Delete
--   [ ] Rent a movie
--   [ ] Buy a movie
--   [ ] Return a movie
--   [ ] Add/Update/Delete Credit Card
--   [ ] View Customer Order History
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Optional User Stories
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- [ ] Add multiple users under one account
-- [ ] Online Rental
-- [ ] Pick up/Delivery
-- [ ] Sort by Rating
-- [ ] Sory by Genre
+### `npm test`
 
-## Tables
-link to the table's structure document
-https://docs.google.com/document/d/1GDGMAWtaKeTs5jyoBrA__l0nNFGu01FDo3qKrQ75WiU/edit
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Tech Stack
+### `npm run build`
 
--   [ ] Java 8
--   [ ] JUnit
--   [ ] Mockito
--   [ ] Apache Maven
--   [ ] Hibernate
--   [ ] Spring 5
--   [ ] Jackson library (for JSON marshalling/unmarshalling)
--   [ ] Java EE Servlet API (v4.0+)
--   [ ] Azure SQL
--   [ ] ReactJS Frontend
--   [ ] Git SCM (on GitHub)
--   [ ] Azure WebApps (Potentially)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Collaborators
-- Jerry Faustin (JF)
-- Ross Seyedrasool Sadrieh (SRS)
-- Maxwell Moord (MM)
-- Matthew Swaney (MS)
-- Jarrett McClenton (JM)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
