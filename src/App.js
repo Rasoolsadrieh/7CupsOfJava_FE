@@ -1,6 +1,9 @@
 import { createContext, useState } from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from "./components/movies/home.jsx";
+import NavBar from "./components/movies/navbar.jsx";
+import CustomerLogin from "./components/movies/customer/customer-login.js";
+import CustomerRegister from "./components/movies/customer/customer-register.jsx";
 
 
 
@@ -13,7 +16,7 @@ function App() {
       <>
       <BrowserRouter>
       <userContext.Provider value={[user, setUser]}>
-          {/* <Nav /> */}
+           <NavBar /> 
           <Routes>
                 <Route path="/" element={<Home />} />
                 
