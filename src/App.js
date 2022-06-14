@@ -1,8 +1,10 @@
 import { createContext, useState } from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from "./components/movies/home.jsx";
-
-
+import CustomerSignOut from "./components/customer/SignOut.jsx";
+import SignUp from "./components/customer/SignUp.js";
+import CustomerSignin from "./components/customer/SignIn";
+import UpdateUser from "./components/customer/UpdateUser.jsx";
 
 
 export const userContext = createContext();
@@ -16,12 +18,16 @@ function App() {
           {/* <Nav /> */}
           <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/signIn" element={<CustomerSignin />} />
+                <Route path="/signUp" element={<SignUp />} />
+                <Route path="/signOut" element={<CustomerSignOut></CustomerSignOut>} />
+                <Route path= "/updateUser" element={<UpdateUser/>}/>
                 
                 
           </Routes>
           </userContext.Provider>
       </BrowserRouter>
-      {/* <Payments/> */}
+      
   </>
 
   );

@@ -60,22 +60,28 @@ export default function HomePage(){
 	};
 
 	return (
+		
 		<div className='container-fluid ross-movie-app'>
+			
 			<div className='row d-flex align-items-center mt-4 mb-4'>
+				
 				<MovieListHeading heading='Ross Favourite Movie Picker Application' />
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+					
 			</div>
-			<div className='row'>
+			<div class='grid-container'>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 				<MovieList
 					movies={movies}
 					handleFavouritesClick={addFavouriteMovie}
 					favouriteComponent={AddFavourites}
 				/>
+				
 			</div>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
 				<MovieListHeading heading='My Favourites' />
 			</div>
-			<div className='row'>
+			<div class='grid-container'>
 				<MovieList
 					movies={favourites}
 					handleFavouritesClick={removeFavouriteMovie}
@@ -83,6 +89,7 @@ export default function HomePage(){
 				/>
 				
 			</div>
+			
 		</div>
 	);
    
