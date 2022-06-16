@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function CustomerRegister() {
 
     const navigate = useNavigate();
-    const url = "";
+    const url = "http://localhost:9005";
 
     const fnameInput = useRef();
     const lnameInput = useRef();
@@ -16,8 +16,8 @@ export default function CustomerRegister() {
     async function register() {
 
         const user = {
-            fname: fnameInput.current.value,
-            lname: lnameInput.current.value,
+            fName: fnameInput.current.value,
+            lName: lnameInput.current.value,
             email: emailInput.current.value,
             password: passwordInput.current.value,
             dob: dobInput.current.value,

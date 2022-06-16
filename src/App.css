@@ -1,5 +1,5 @@
 body {
-	background: #000000;
+	background: #141414;
 	color: #ffffff;
 }
 
@@ -33,11 +33,4 @@ body {
 	padding: 20px;
 	text-align: center;
 }
-
-.grid-container {
-    display:grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-    table-layout: auto;
-  }
 

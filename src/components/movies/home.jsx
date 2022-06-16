@@ -4,13 +4,13 @@ import './home.css';
 import AddFavourites from './AddFavourites';
 import MovieList from './MovieList';
 import MovieListHeading from './MovieListHeading';
-import RemoveFavourites from './RemoveFavourites';
 import SearchBox from './SearchBox';
+import { useNavigate } from "react-router-dom";
 
 
 export default function HomePage(){
+	const navigate = useNavigate();
 	const [movies, setMovies] = useState([]);
-	const [favourites, setFavourites] = useState([]);
 	const [searchValue, setSearchValue] = useState('');
 
 	const getMovieRequest = async (searchValue) => {
@@ -18,10 +18,10 @@ export default function HomePage(){
 		
 
 		const response = await fetch(url);
-		const responseJson = await response.json();
+		const movieResponse = await response.json();
 
-		if (responseJson.Search) {
-			setMovies(responseJson.Search);
+		if (movieResponse.Search) {
+			setMovies(movieResponse.Search);
 		}
 	};
 
@@ -29,61 +29,27 @@ export default function HomePage(){
 		getMovieRequest(searchValue);
 	}, [searchValue]);
 
-	useEffect(() => {
-		const movieFavourites = JSON.parse(
-			localStorage.getItem('react-ross-movie-app-favourites')
-		);
+	async function dashboardReturn(){
+        navigate("/dashboard");
+    }
 
-		if (movieFavourites) {
-			setFavourites(movieFavourites);
-		}
-	}, []);
-
-	const saveToLocalStorage = (items) => {
-		localStorage.setItem('react-ross-movie-app-favourites', JSON.stringify(items));
-	};
-
-	const addFavouriteMovie = (movie) => {
-		const newFavouriteList = [...favourites, movie];
-		setFavourites(newFavouriteList);
-		saveToLocalStorage(newFavouriteList);
-	};
-
-	const removeFavouriteMovie = (movie) => {
-		const newFavouriteList = favourites.filter(
-			(favourite) => favourite.imdbID !== movie.imdbID
-		);
-
-		setFavourites(newFavouriteList);
-		saveToLocalStorage(newFavouriteList);
-		console.log(movie)
-	};
+	
 
 	return (
+		<>
+		<button onClick={dashboardReturn}>Return to Dashboard</button> 
 		<div className='container-fluid ross-movie-app'>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<MovieListHeading heading='Ross Favourite Movie Picker Application' />
+				<MovieListHeading heading='BlockBusster Application' />
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 			</div>
-			<div className='row'>
+			<div class='grid-container'>
 				<MovieList
 					movies={movies}
-					handleFavouritesClick={addFavouriteMovie}
-					favouriteComponent={AddFavourites}
 				/>
-			</div>
-			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<MovieListHeading heading='My Favourites' />
-			</div>
-			<div className='row'>
-				<MovieList
-					movies={favourites}
-					handleFavouritesClick={removeFavouriteMovie}
-					favouriteComponent={RemoveFavourites}
-				/>
-				
 			</div>
 		</div>
+		</>
 	);
    
 }
