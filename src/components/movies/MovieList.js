@@ -13,6 +13,8 @@ const MovieList = (props) => {
 						className='overlay d-flex align-items-center justify-content-center'
 					>
 						<FavouriteComponent />
+						
+						
 					</div>
 				</div>
 			))}

