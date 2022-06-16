@@ -1,27 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import axios from "axios";
+import { useState } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from 'axios';
-import { useRef } from 'react';
 
-export default function FavoriteDelete() {
-    
+export default function FavoriteFindAll() {
+
     const navigate = useNavigate();
     const [favoriteBody, setFavoriteBody] = useState([]);
     const url = "http://localhost:9005";
-    
-    const movieIdInput = useRef();
     const emailInput = useRef();
-
-    async function deleteFav(){
-
-        try {
-            const response = await axios.delete(`${url}/deletefv/${movieIdInput.current.value}`);
-            console.log(response.data);
-        } catch (error) {
-            console.error(error.response.data);
-            alert(error.response.data);
-        }
-    }
 
     async function findAll() {
         try {
@@ -41,22 +28,13 @@ export default function FavoriteDelete() {
             console.error(e);
         }
     }
-
     async function dashboardReturn(){
         navigate("/dashboard");
     }
 
-    return(
-        <>
-            <button onClick={dashboardReturn}>Return to Dashboard</button> 
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <input placeholder="Enter the MovieID" ref={movieIdInput}></input>  
-            <button onClick={deleteFav}>Remove Favorite</button>
+    return (
+        <> 
+            <button onClick={dashboardReturn}>Return to Dashboard</button>
             <br></br>
             <br></br>
             <br></br>
@@ -65,12 +43,11 @@ export default function FavoriteDelete() {
             <table>
                 <thead>
                     <tr>
-                        <th>movie Id</th>
+                        <th>movieId</th>
                     </tr>
                 </thead>
                 <tbody>{favoriteBody}</tbody>
             </table>
-
         </>
     )
 }

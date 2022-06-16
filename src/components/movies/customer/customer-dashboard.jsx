@@ -16,6 +16,8 @@ export default function CustomerDashboard() {
             <button onClick={() => navigate("/ccupd")}>Update Credit Card</button>
             <button onClick={() => navigate("/ccdel")}>Delete Credit Card</button>
             <button onClick={() => navigate("/favadd")}>Add Favorites</button>
+            <button onClick={() => navigate("/favdel")}>Delete Favorites</button>
+            <button onClick={() => navigate("/favall")}>View Favorites</button>
             <br></br>
             <br></br>
             <br></br>

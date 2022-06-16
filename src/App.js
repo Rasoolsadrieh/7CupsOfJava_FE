@@ -11,6 +11,8 @@ import CreditCardDelete from "./components/movies/creditcard/creditcard-delete.j
 import CustomerDashboard from "./components/movies/customer/customer-dashboard.jsx";
 import CustomerWelcome from "./components/movies/customer/customer-welcome.jsx";
 import FavoriteAdd from "./components/movies/favorite/favorite-add.jsx";
+import FavoriteFindAll from "./components/movies/favorite/favorite-viewall.jsx";
+import FavoriteDelete from "./components/movies/favorite/favorite-delete.jsx";
 import MovieList from "./components/movies/MovieList.js";
 import MovieListHeading from "./components/movies/MovieListHeading.js";
 import SearchBox from "./components/movies/SearchBox.js";
@@ -36,6 +38,8 @@ function App() {
               <Route path="ccdel" element={<CreditCardDelete></CreditCardDelete>} />
               <Route path="movie" element={<Home />} />
               <Route path="favadd" element={<FavoriteAdd />} />
+              <Route path="favall" element={<FavoriteFindAll />} />
+              <Route path="favdel" element={<FavoriteDelete />} />
               <Route path="/" element={<CustomerWelcome />} />
                 
                 
