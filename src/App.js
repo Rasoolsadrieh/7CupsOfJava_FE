@@ -8,6 +8,8 @@ import UpdateUser from "./components/customer/UpdateUser.jsx";
 import Album from "./components/test/Album.js";
 import FindMovie from "./components/movies/FindMovie.jsx";
 import Testing from "./components/test/Testing.jsx";
+import CreateRentOrder from "./components/order/create_rent_order.jsx";
+import UpdateRentOrder from "./components/order/update_rent_order.jsx";
 
 
 export const userContext = createContext();
@@ -28,6 +30,8 @@ function App() {
                 <Route path= "findMovie" element={<FindMovie/>}/>
                 <Route path="test" element={<Album/>}/>
                 <Route path="testing" element={<Testing/>}/>
+                <Route path="rentmovie" element={<CreateRentOrder/>}/>
+                <Route path="updaterentedmovie" element={<UpdateRentOrder/>}/>
                 
                 
           </Routes>
