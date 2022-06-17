@@ -18,13 +18,14 @@ import FavoriteFindAll from "./components/favorites/favorite-viewall.jsx";
 import FavoriteDelete from "./components/favorites/favorite-delete.jsx";
 import OrderRent from "./components/order/order-rent.jsx";
 import OrderFindAll from "./components/order/order-viewall.jsx";
+import Logout from "./components/customer/customer-logout.jsx";
 
 
 export const userContext = createContext();
 export const movieContext = createContext();
 
 function App() {
-  const [user, setUser] = useState({ username: "Guest" });
+  const [user, setUser] = useState({ email: "Guest" });
   const [movie, setMovie]= useState({imdbID: "null"})
   return (
       <>
@@ -53,6 +54,7 @@ function App() {
               <Route path="favadd" element={<FavoriteAdd />} />
               <Route path="favall" element={<FavoriteFindAll />} />
               <Route path="favdel" element={<FavoriteDelete />} />
+              <Route path="logout" element={<Logout />} />
                 
           </Routes>
           </movieContext.Provider>

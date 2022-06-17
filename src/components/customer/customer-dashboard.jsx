@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { userContext } from "../../App";
+import Logout from "./customer-logout";
 
 export default function CustomerDashboard() {
     const [user, setUser] = useContext(userContext);
@@ -15,15 +16,10 @@ export default function CustomerDashboard() {
             <br></br>
             <br></br>
             <br></br>
-            <button onClick={() => navigate("/favadd")}>Add Favorites</button>
             <button onClick={() => navigate("/favdel")}>Delete Favorites</button>
             <button onClick={() => navigate("/favall")}>View Favorites</button>
-            <br></br>
-            <br></br>
-            <br></br>
-            <button onClick={() => navigate("/orderbuy")}>Buy a Movie</button>
-            <button onClick={() => navigate("/orderrent")}>Rent a Movie</button>
             <button onClick={() => navigate("/orderall")}>View all Orders</button>
+            <br></br>
             <br></br>
             <br></br>
             <br></br>
@@ -34,7 +30,7 @@ export default function CustomerDashboard() {
             <br></br>
             <br></br>
             <br></br>
-            <button onClick={() => navigate("/")}>Logout</button>
+            <button onClick={() => navigate("/logout")}>Logout</button>
             <button onClick={() => navigate("/delete")}>Delete Account</button>
 
             

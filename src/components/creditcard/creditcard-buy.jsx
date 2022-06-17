@@ -22,7 +22,7 @@ export default function CreditCardBuy(){
             cvv: cvvInput.current.value,
             expDate: expDateInput.current.value,
             zip: zipInput.current.value,
-            limit: limitInput.current.value - 15,
+            limit: limitInput.current.value - 10,
             customerEmail: customerEmailInput.current.value,
         };
         try {

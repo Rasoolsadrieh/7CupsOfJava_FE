@@ -1,11 +1,13 @@
 import axios from "axios";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { movieContext } from "../../App";
 
 export default function OrderRent(){
 
     const navigate = useNavigate();
+    const [movie, setMovie] = useContext(movieContext);
     const movieIdInput = useRef();
     const orderDateInput = useRef();
     const orderEmailInput = useRef();
@@ -14,7 +16,7 @@ export default function OrderRent(){
     async function orderRent(){
 
         const user = {
-            movieId: movieIdInput.current.value,
+            movieId: movie,
             orderDate: "06/17/2022",
             balance: 5,
             isOwned: false,
@@ -42,7 +44,7 @@ export default function OrderRent(){
             <br></br>
             <h4>Place an order Below.</h4>
             <h6>Each Movie is $5 to rent.</h6>
-            <input placeholder="Enter Movie for purchase" ref={movieIdInput}></input>
+            <h1>Movie Id:{movie}</h1>
             <input placeholder="Enter Your Email" ref={orderEmailInput}></input>
             <button onClick={orderRent}>Place Order</button>
  

@@ -34,8 +34,8 @@ export default function MovieInfo(props){
 
     function goBuy(id){
         console.log(id)
-        console.log(user.username)
-         if(user.username === "Guest"){
+        console.log(user.email)
+         if(user.email === "Guest"){
             navigate("/login")
         }else{
         setMovie(id)
@@ -44,16 +44,16 @@ export default function MovieInfo(props){
     }
 
     function goRent(id){
-        if(user.username === "Guest"){
+        if(user.email === "Guest"){
             navigate("/login")
         }else{
         setMovie(id)
-        navigate("/orderrnet")
+        navigate("/orderrent")
         }
     }
 
     function goFavorite(id){
-        if(user.username === "Guest"){
+        if(user.email === "Guest"){
             navigate("/login")
         }else{
         setMovie(id)
