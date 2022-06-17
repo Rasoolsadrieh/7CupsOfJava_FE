@@ -53,12 +53,12 @@ export default function MovieInfo(props){
     }
 
     function goFavorite(id){
-        // if(user.username === "Guest"){
-        //     navigate("/login")
-        // }else{
+        if(user.username === "Guest"){
+            navigate("/login")
+        }else{
         setMovie(id)
         navigate("/favadd")
-        //}
+        }
     }
 
     return(
