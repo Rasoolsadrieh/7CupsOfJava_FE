@@ -16,7 +16,7 @@ export default function OrderBuy(){
         const user = {
             movieId: movieIdInput.current.value,
             orderDate: "06/17/2022",
-            balance: 15,
+            balance: 10,
             isOwned: true,
             returnDate: "Owned",
             orderEmail: orderEmailInput.current.value,
@@ -41,7 +41,7 @@ export default function OrderBuy(){
             <br></br>
             <br></br>
             <h4>Place an order Below.</h4>
-            <h6>Each Movie is $15 to buy.</h6>
+            <h6>Each Movie is $10 to buy.</h6>
             <input placeholder="Enter Movie for purchase" ref={movieIdInput}></input>
             <input placeholder="Enter Your Email" ref={orderEmailInput}></input>
             <button onClick={orderBuy}>Place Order</button>
